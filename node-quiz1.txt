@@ -1,0 +1,148 @@
+Node Quiz Name :__Dairon Rodriguez___________
+1) What is node.js and why should we use it?
+-Node js is a plattform built on Jvascript for building fast and scalable network applications.
+-Node has diferents uses:
+single page application.
+streaming applications.
+json apis based applications.
+
+
+2) Does NPM come bundled with node.js when you install it?
+
+-No
+3) What is the function used to send a file to a browser from an express app?
+app.get();
+-res.send();
+
+4) What does the following code do? app.use(bodyParser.json());
+- body-parser extracts the entire body portion of an incoming request
+stream and exposes it on req.body as something easier to interface with.
+Parses the text as JSON and exposes the resulting object on req.body.
+
+
+5) What does the following code do? app.use(express.static('public'));
+- Static files are files that clients download as they are from the server.express.static()
+is handled by serve-static package middleware.
+
+
+
+
+6) Please create a basic outline for a CRUD application for the following:
+I am your client, and I need an API for a stock market app I am building. Happily, you got the
+job!!
+I need the following data:
+- stock name
+- stock symbol
+- stock price
+- time.date of price
+- market instrument is traded on
+I will need the the full complement of CRUD for my API. Read should include the ability to
+retrieve all the stocks, or one stock.
+Create an outline or plan for the data, and the end points. No need to write the code, but I do
+want to see the plan that you would implement the API from. Use the following as a model:
+{
+ "stockName": "gold",
+ "i d": 1,
+ "stockSymbol": g,
+ "stockPrice": 135.00,
+ "timeDateofPrice": 14:00,
+ "marketInstrument":"huhuuh"
+}
+{
+ " GET /stockMarkets": {
+ "desc": "returns all stockMarket",
+ "response": "200 application/json",
+ "dat a": [{}, {}, {}]
+ },
+
+ " GET /stockMarkets/:i d": {
+"desc": "returns one stockMarket respresented by its i d",
+"response": "200 application/json",
+"dat a": {}
+},
+" POST /stockMarkets": {
+"desc": "create and returns a new stockMarket uisng the posted object as the stockMarket",
+"response": "201 application/json",
+"dat a": {}
+},
+" PUT /stockMarkets/:i d": {
+"desc": "updates and returns the matching stockMarket with the post edupdate
+object",
+"response": "200 application/json",
+"dat a": {}
+},
+" DELETE /stockMarkets/:i d": {
+"desc": "deletes and returns the matching stockMarket",
+"response": "200 application/json",
+"dat a": {}
+}
+}
+
+
+7) What is the “event Loop”?
+-The Event Loop is a queue of callback functions.
+JavaScript  doesn't start processing the event loop until the
+code after an async function has executed,
+
+8) What is a callback?
+-is a function that is passed to another function.
+
+
+9) Please explain synchronous vs asynchronous behavior.
+-When you execute something synchronously, you wait for it to finish before moving on to another task.
+When you execute something asynchronously,
+you can move on to another task before it finishes.
+
+10) What is package.json?
+-This file is used to give information to npm that allows it to identify the project
+and handle the projects dependencies.
+
+11) Which module is used for file based operations?
+
+-fs module.
+var fs = require("fs");
+
+12) How will you open a file using node?
+  -we can use the fs.readFile
+
+
+  13) What is the purpose of __dirname variable?
+-The directory name of the current module  that the currently executing script resides in.
+
+  14) Can you access the DOM in node?
+  -yes.
+
+  15) Explain briefly how node.js solves the problem of blocking i/o.
+  -I/O is shorthand for Input and Output and it means accessing anything outside of your application.
+
+Blocking refers to operations that block further execution until that operation finishes.
+ Non-blocking refers to code that doesn't block execution.
+
+  16) What is the most common used framework used in node.js? Hint: It’s used to write web
+  servers.
+  -express.js
+
+  17) Please write a basic route using the get verb that returns all the items from an array in JSON
+  format. Hint: We did this in class…
+- app.get('/containers', function(req, res){
+  res.json(containers);
+});
+
+
+  18) What does CRUD stand for?
+Create
+Read
+Update
+Delete
+
+  19) Who developed node.js?
+-Ryan Dahl in 2009.
+
+  20) How do we make code in a file (module) in our project accessible to other modules in our
+  project? Please describe what you need to do in the module with the code, and in the module
+  that wishes to use that code.
+- module.exports();
+
+-in the server:
+
+var example = require('./examples');
